@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Todo List</title>
+</head>
+
+<body>
+    <main>
+        <div id="id-notify" class="notify" role="alert" aria-live="polite"></div>
+
+        <div class="container">
+            <div class="list-body">
+                <h1 class="heading">Todo List</h1>
+                <div class="head-items">
+                    <div class="input">
+                        <input id="id-input" type="text" placeholder="What needs to be done?"
+                            aria-label="Todo item input" autocomplete="off">
+                    </div>
+                    <div class="add-item">
+                        <button id="id-add-item" aria-label="Add todo item">Add Item</button>
+                    </div>
+                </div>
+                <div class="item-div" id="id-list-body" role="list">
+                    <!-- Todo Items Here -->
+                </div>
+                <div id="empty-state" class="empty-state">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        style="margin-bottom: 1rem;">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    <h3>No tasks yet</h3>
+                    <p>Add your first task to get started</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cipher Encoder</title>
+</head>
+
+<body>
+    <script>
+        const key = "GADERYPOLUKITVMZXNSQRFHJ";
+
+        function decodeEncodeCipher(message, keyString) {
+            if(!message || !keyString) return "Invalid Params"
+            if(!(typeof(message) === 'string')) return "Msg in not String"
+            if (!(key.length % 2 === 0)) return "Invalid Key!";
+            var keyArr = [];
+            let countVar = 0;
+            for (let checkVar of keyString.toUpperCase()) {
+                if (countVar % 2 === 0 && !(keyArr.length === 0)) keyArr.push("-");
+                keyArr.push(checkVar);
+                countVar++;
+            }
+
+            var messageOut = [];
+            for (let char of message) {
+                if (keyArr.includes(char.toUpperCase())) {
+                    let toPushVar;
+                    if (
+                        keyArr[keyArr.indexOf(char.toUpperCase()) + 1] !== undefined &&
+                        keyArr[keyArr.indexOf(char.toUpperCase()) + 1] !== "-"
+                    )
+                        toPushVar = keyArr[keyArr.indexOf(char.toUpperCase()) + 1].toLowerCase();
+                    else
+                        toPushVar = keyArr[keyArr.indexOf(char.toUpperCase()) - 1].toLowerCase();
+                    messageOut.push(toPushVar);
+                }
+                else messageOut.push(char);
+            }
+            return messageOut.join("");
+        }
+
+        // console.log(decodeEncodeCipher("This is secret message", key));
+        // console.log(decodeEncodeCipher("vjkq kq qdcydv zdqqgad", key));
+    </script>
+</body>
+
+</html>
