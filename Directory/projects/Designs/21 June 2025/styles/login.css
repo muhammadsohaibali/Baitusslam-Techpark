@@ -1,0 +1,126 @@
+body {
+    background: url('../assets/login-background.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    background-color: white;
+    box-shadow: 10px 10px red;
+    display: flex;
+    min-height: 300px;
+    flex-direction: column;
+    padding: 30px 20px;
+    border-radius: 0 8px 0 8px;
+    align-items: center;
+}
+
+.logo-div {
+    width: 100%;
+    margin: 10px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-img {
+    width: 50%;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container input {
+    margin: 10px 0;
+    width: 250px;
+    height: 40px;
+    outline: none;
+    font-size: 16px;
+    padding-left: 8px;
+    border-radius: 4px;
+    border: 2px solid #001719;
+    transition: padding 0.1s;
+}
+
+.input-container input:focus {
+    border: 2px solid #db4242;
+    border-left: 6px solid #db4242;
+    width: auto;
+    padding-left: 12px;
+}
+
+.forgot-password {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.forgot-password-p-tag {
+    margin: 0;
+    width: 260px;
+    text-align: right;
+}
+
+.forgot-password-p-tag a {
+    color: #001719;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.login-btn {
+    background-color: #001719;
+    color: white;
+    padding: 10px 20px;
+    font-weight: 200;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+}
+
+@media screen and (max-width: 768px) {
+    .login-form {
+        padding: 20px 10px;
+        margin: 0 20px;
+        min-height: 200px;
+    }
+
+    .input-container {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .input-container input {
+        width: auto;
+        height: 30px;
+    }
+
+    .forgot-password {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .forgot-password-p-tag {
+        text-align: center;
+    }
+
+}
