@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./styles/all-students.css">
+
+    <title>All Students - Admin Panel</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-container">
+            <span>Students Admin Panel</span>
+            <select class="batchFilter" id="batchFilter">
+                <option value="all" selected>All Batches</option>
+                <option value="Morning">Morning</option>
+                <option value="Evening">Evening</option>
+            </select>
+
+        </div>
+        <table class="student-table">
+            <thead>
+                <tr>
+                    <th>Photo</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Contact</th>
+                    <th>Batch</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <!-- Main Content Goes Here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script type="module" src="./js/database.js"></script>
+    <script type="module" src="./js/all-students.js"></script>
+</body>
+
+</html>

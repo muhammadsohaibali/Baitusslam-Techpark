@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 450;
+    background-color: #f3f3f3;
+    user-select: none;
+}
+
+.container {
+    width: 70%;
+    display: flex;
+    border-radius: 5px;
+    padding: 30px 30px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    margin: 30px auto 0 auto;
+}
+
+.header-container {
+    background: url('../assets/student-header-background.png');
+    background-size: cover;
+    width: 100%;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.header-container span {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: auto 0 10px 0;
+    text-decoration: underline;
+}
+
+.student-table {
+    margin-top: 20px;
+    border-spacing: 0;
+}
+
+.student-table,
+.student-table th,
+.student-table td {
+    border: none;
+    text-align: left;
+}
+
+.student-table td img {
+    border-radius: 50%;
+    width: 40px;
+    display: block;
+    margin: auto 0;
+}
+
+.student-table tbody tr:hover {
+    background-color: #f3f3f3;
+}
+
+.batchFilter {
+    width: fit-content;
+    padding: 8px 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    outline: none;
+    margin: 5px auto auto auto;
+}
